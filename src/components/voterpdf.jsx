@@ -17,72 +17,15 @@ const styles = StyleSheet.create({
         padding: 10,
         flexGrow: 1
     },
-    movieContainer: {
-        backgroundColor: "#f6f6f5",
-        display: "flex",
-        flexDirection: "row",
-        padding: 5
-    },
-    movieDetails: {
-        display: "flex",
-        marginLeft: 5
-    },
-    movieTitle: {
-        fontSize: 15,
+    title: {
+        fontSize: 35,
+        fontWeight: "bold",
         marginBottom: 10
     },
-    movieOverview: {
-        fontSize: 10
-    },
-
     image: {
-        height: 200,
-        width: 150
-    },
-    subtitle: {
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "row",
         width: 150,
-        alignItems: "center",
-        marginBottom: 12
-    },
-    vote: {
-        display: "flex",
-        flexDirection: "row"
-    },
-    rating: {
-        height: 10,
-        width: 10
-    },
-    vote_text: {
-        fontSize: 10
-    },
-    vote_pop: {
-        fontSize: 10,
-        padding: 2,
-        backgroundColor: "#61C74F",
-        color: "#fff"
-    },
-    vote_pop_text: {
-        fontSize: 10,
-        marginLeft: 4
-    },
-    overviewContainer: {
-        minHeight: 110
-    },
-    detailsFooter: {
-        display: "flex",
-        flexDirection: "row"
-    },
-    lang: {
-        fontSize: 8,
-        fontWeight: 700
-    },
-    vote_average: {
-        fontSize: 8,
-        marginLeft: 4,
-        fontWeight: "bold"
+        height: 200,
+        objectFit: "cover",
     }
 });
 
@@ -92,12 +35,12 @@ export default function VoterPDF(props) {
     return (
         <Document>
             <Page style={styles.page}>
-                <View style={styles.movieContainer}>
-                    <Text>Voter Detail</Text>
+                <View style={styles.section}>
+                    <Text style={styles.title}>Voter Detail</Text>
                     <Text>Elector's Name: {props.data.electorname}</Text>
                     <Text>Father's Name: {props.data.fathername}</Text>
                     <Text>Photo:</Text>
-                    {/* <Image src={props.data.photo} alt="Profile" /> */}
+                    <Image style={styles.image} src={props.data.photo} alt="Profile" />
                     <Text>Date of Birth: {props.data.dob}</Text>
                     <Text>Sex: {props.data.sex}</Text>
                     <Text>Address: {props.data.address}</Text>
