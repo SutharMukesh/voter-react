@@ -19,15 +19,12 @@ class SearchVoter extends Component {
     );
     this.props.fetchVoters(filter);
   };
-  //   componentDidMount() {
-  //     debugger;
-  //     this.props.fetchVoters();
-  //   }
+
   render() {
     debugger;
     return (
       <div className="container">
-        <div className="card  mt-5">
+        <div className="card mt-5">
           <div className="card-body">
             <h5 className="card-title mb-4 text-center">Voter Search</h5>
             <form
@@ -89,7 +86,7 @@ class SearchVoter extends Component {
                 className="card-img-left"
                 src={voter.photo}
                 alt="profile"
-                style={{ width: 100, height: "auto" }}
+                style={{ width: 100, height: "auto", objectFit: "cover" }}
               />
               <div className="d-flex w-100 flex-column justify-content-between">
                 <div className="d-flex m-2 justify-content-between">

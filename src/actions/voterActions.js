@@ -1,4 +1,4 @@
-import { FETCH_VOTER, ADD_VOTER } from "./types";
+import { FETCH_VOTER } from "./types";
 import axios from "axios";
 
 function arrayBufferToBase64(buffer) {
@@ -14,7 +14,7 @@ export function fetchVoters(filters) {
       debugger;
       const response = await axios.post("http://localhost:3009/getfilteredvoter",filters);
       response.data.map((data)=>{
-        var base64Flag = "data:image/jpeg;base64,";
+        var base64Flag = `data:${data.photo.contentType};base64,`;
         var imageStr = arrayBufferToBase64(data.photo.data.data);
         data.photo = base64Flag + imageStr;
         return data
