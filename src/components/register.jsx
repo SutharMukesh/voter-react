@@ -24,17 +24,6 @@ export default class Register extends Component {
             voterdata.append("sex", event.target.sexid.value)
             voterdata.append("address", event.target.addressid.value)
             voterdata.append("mobile", event.target.mobilenoid.value)
-            // let voter = {
-            //     electorname: event.target.nameid.value,
-            //     fathername: event.target.fatherid.value,
-            //     dob: event.target.dobid.value,
-            //     sex: event.target.sexid.value,
-            //     photo: voterdata,
-            //     address: event.target.addressid.value,
-            //     mobile: event.target.mobilenoid.value,
-            //     dateadded: new Date().toString()
-            // };
-
             const response = await axios.post("http://localhost:3009/addimage", voterdata);
             alert(response.message);
         } catch (error) {

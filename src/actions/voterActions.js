@@ -8,20 +8,22 @@ function arrayBufferToBase64(buffer) {
   return window.btoa(binary);
 }
 
-export function fetchVoters() {
+export function fetchVoters(filters) {
   return async function(dispatch) {
     try {
-        console.log("fetch")
-      const response = await axios.get("http://localhost:3009/5e35cabc32a38e284053c008");
-      var data = response.data;
-      var base64Flag = "data:image/jpeg;base64,";
-      var imageStr = arrayBufferToBase64(data.photo.data.data);
-      data.photo = base64Flag + imageStr;
+      debugger;
+      const response = await axios.post("http://localhost:3009/getfilteredvoter",filters);
+      response.data.map((data)=>{
+        var base64Flag = "data:image/jpeg;base64,";
+        var imageStr = arrayBufferToBase64(data.photo.data.data);
+        data.photo = base64Flag + imageStr;
+        return data
+      })
       dispatch({
         type: FETCH_VOTER,
-        payload: data
+        payload: response.data
       });
-      alert(response);
+      // alert(response);
     } catch (error) {
       alert(error);
       console.error(error);

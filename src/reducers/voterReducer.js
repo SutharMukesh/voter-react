@@ -6,7 +6,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case FETCH_VOTER:
       debugger;
-      state = action.payload;
+      state.voters = action.payload;
       return {...state};
     default:
       return state;
