@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "sutharmukesh.github.io/voter/static/js/main.534815ef.chunk.js",
-    "main.js.map": "sutharmukesh.github.io/voter/static/js/main.534815ef.chunk.js.map",
-    "runtime-main.js": "sutharmukesh.github.io/voter/static/js/runtime-main.ff2f98b5.js",
-    "runtime-main.js.map": "sutharmukesh.github.io/voter/static/js/runtime-main.ff2f98b5.js.map",
-    "static/css/2.64a99b10.chunk.css": "sutharmukesh.github.io/voter/static/css/2.64a99b10.chunk.css",
-    "static/js/2.549b799a.chunk.js": "sutharmukesh.github.io/voter/static/js/2.549b799a.chunk.js",
-    "static/js/2.549b799a.chunk.js.map": "sutharmukesh.github.io/voter/static/js/2.549b799a.chunk.js.map",
-    "index.html": "sutharmukesh.github.io/voter/index.html",
-    "precache-manifest.832d8b53febf5a097b26a187478ecd6f.js": "sutharmukesh.github.io/voter/precache-manifest.832d8b53febf5a097b26a187478ecd6f.js",
-    "service-worker.js": "sutharmukesh.github.io/voter/service-worker.js",
-    "static/css/2.64a99b10.chunk.css.map": "sutharmukesh.github.io/voter/static/css/2.64a99b10.chunk.css.map",
-    "static/js/2.549b799a.chunk.js.LICENSE": "sutharmukesh.github.io/voter/static/js/2.549b799a.chunk.js.LICENSE"
+    "main.js": "/voter/static/js/main.534815ef.chunk.js",
+    "main.js.map": "/voter/static/js/main.534815ef.chunk.js.map",
+    "runtime-main.js": "/voter/static/js/runtime-main.0a30229b.js",
+    "runtime-main.js.map": "/voter/static/js/runtime-main.0a30229b.js.map",
+    "static/css/2.64a99b10.chunk.css": "/voter/static/css/2.64a99b10.chunk.css",
+    "static/js/2.efec887a.chunk.js": "/voter/static/js/2.efec887a.chunk.js",
+    "static/js/2.efec887a.chunk.js.map": "/voter/static/js/2.efec887a.chunk.js.map",
+    "index.html": "/voter/index.html",
+    "precache-manifest.253325fd1800dc4999729b2f81d313a1.js": "/voter/precache-manifest.253325fd1800dc4999729b2f81d313a1.js",
+    "service-worker.js": "/voter/service-worker.js",
+    "static/css/2.64a99b10.chunk.css.map": "/voter/static/css/2.64a99b10.chunk.css.map",
+    "static/js/2.efec887a.chunk.js.LICENSE": "/voter/static/js/2.efec887a.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff2f98b5.js",
+    "static/js/runtime-main.0a30229b.js",
     "static/css/2.64a99b10.chunk.css",
-    "static/js/2.549b799a.chunk.js",
+    "static/js/2.efec887a.chunk.js",
     "static/js/main.534815ef.chunk.js"
   ]
 }
