@@ -24,7 +24,7 @@ class SearchVoter extends Component {
     debugger;
     return (
       <div className="container">
-        <div className="card mt-5">
+        <div className="card shadow-sm mt-5">
           <div className="card-body">
             <h5 className="card-title mb-4 text-center">Voter Search</h5>
             <form
@@ -75,13 +75,15 @@ class SearchVoter extends Component {
                   placeholder="Enter Date of birth"
                 />
               </div>
-              <button className="btn btn-secondary">Search</button>
+              <div className="form-group mt-2 row">
+                <button className="btn w-100 btn-secondary">Search</button>
+              </div>
             </form>
           </div>
         </div>
         {this.props.voters.length > 0 ? (
           this.props.voters.map(voter => (
-            <div className="card mt-2 d-flex flex-row">
+            <div className="card shadow-sm mt-2 d-flex flex-row">
               <img
                 className="card-img-left"
                 src={voter.photo}
@@ -117,8 +119,7 @@ class SearchVoter extends Component {
 }
 
 SearchVoter.defaultProps = {
-  voters: [
-  ]
+  voters: []
 };
 
 const mapStateToProps = state => ({

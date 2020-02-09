@@ -12,10 +12,42 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: "#ffffff"
   },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
+  rightColumn: {
+    flexDirection: "column",
+    width: "auto",
+    paddingTop: 30,
+    paddingRight: 15,
+    "@media max-width: 400": {
+      width: "100%",
+      paddingRight: 0
+    },
+    "@media orientation: landscape": {
+      width: 200
+    }
+  },
+  container: {
+    flex: 1,
+    padding: 30,
+    flexDirection: "row",
+    paddingLeft: 15,
+    "@media max-width: 400": {
+      paddingTop: 10,
+      paddingLeft: 0
+    }
+  },
+
+  leftColumn: {
+    flexDirection: "column",
+    width: 170,
+    paddingTop: 30,
+    paddingRight: 15,
+    "@media max-width: 400": {
+      width: "100%",
+      paddingRight: 0
+    },
+    "@media orientation: landscape": {
+      width: 200
+    }
   },
   title: {
     fontSize: 35,
@@ -25,7 +57,7 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 200,
-    objectFit:"cover"
+    objectFit: "cover"
   }
 });
 
@@ -34,17 +66,22 @@ export default function VoterPDF(props) {
   debugger;
   return (
     <Document>
-      <Page style={styles.page}>
-        <View style={styles.section}>
-          <Text style={styles.title}>Voter Detail</Text>
-          <Text>Elector's Name: {props.data.electorname}</Text>
-          <Text>Father's Name: {props.data.fathername}</Text>
-          <Text>Photo:</Text>
-          <Image style={styles.image} src={props.data.photo} />
-          <Text>Date of Birth: {props.data.dob}</Text>
-          <Text>Sex: {props.data.sex}</Text>
-          <Text>Address: {props.data.address}</Text>
-          <Text>Mobile no: {props.data.mobile}</Text>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.container}>
+          <View style={styles.leftColumn}>
+            <Image style={styles.image} src={props.data.photo} />
+          </View>
+          <View style={styles.rightColumn}>
+            <Text style={styles.title}>
+              Voter Detail
+            </Text>
+            <Text>Elector's Name: {props.data.electorname}</Text>
+            <Text>Father's Name: {props.data.fathername}</Text>
+            <Text>Date of Birth: {props.data.dob}</Text>
+            <Text>Sex: {props.data.sex}</Text>
+            <Text>Address: {props.data.address}</Text>
+            <Text>Mobile no: {props.data.mobile}</Text>
+          </View>
         </View>
       </Page>
     </Document>
