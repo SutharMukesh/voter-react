@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/voter-react/static/js/main.aea079a1.chunk.js",
-    "main.js.map": "/voter-react/static/js/main.aea079a1.chunk.js.map",
+    "main.js": "/voter-react/static/js/main.bee13a6b.chunk.js",
+    "main.js.map": "/voter-react/static/js/main.bee13a6b.chunk.js.map",
     "runtime-main.js": "/voter-react/static/js/runtime-main.ea11b110.js",
     "runtime-main.js.map": "/voter-react/static/js/runtime-main.ea11b110.js.map",
     "static/css/2.64a99b10.chunk.css": "/voter-react/static/css/2.64a99b10.chunk.css",
-    "static/js/2.56d3d4d2.chunk.js": "/voter-react/static/js/2.56d3d4d2.chunk.js",
-    "static/js/2.56d3d4d2.chunk.js.map": "/voter-react/static/js/2.56d3d4d2.chunk.js.map",
+    "static/js/2.4b9c6127.chunk.js": "/voter-react/static/js/2.4b9c6127.chunk.js",
+    "static/js/2.4b9c6127.chunk.js.map": "/voter-react/static/js/2.4b9c6127.chunk.js.map",
     "index.html": "/voter-react/index.html",
-    "precache-manifest.c4413441c7c08732bb59ac49cfb67ce8.js": "/voter-react/precache-manifest.c4413441c7c08732bb59ac49cfb67ce8.js",
+    "precache-manifest.dacc41372d3a2d0b588036e336cf7497.js": "/voter-react/precache-manifest.dacc41372d3a2d0b588036e336cf7497.js",
     "service-worker.js": "/voter-react/service-worker.js",
     "static/css/2.64a99b10.chunk.css.map": "/voter-react/static/css/2.64a99b10.chunk.css.map",
-    "static/js/2.56d3d4d2.chunk.js.LICENSE": "/voter-react/static/js/2.56d3d4d2.chunk.js.LICENSE"
+    "static/js/2.4b9c6127.chunk.js.LICENSE": "/voter-react/static/js/2.4b9c6127.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.ea11b110.js",
     "static/css/2.64a99b10.chunk.css",
-    "static/js/2.56d3d4d2.chunk.js",
-    "static/js/main.aea079a1.chunk.js"
+    "static/js/2.4b9c6127.chunk.js",
+    "static/js/main.bee13a6b.chunk.js"
   ]
 }
