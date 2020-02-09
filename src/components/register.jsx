@@ -31,7 +31,7 @@ export default class Register extends Component {
       voterdata.append("address", event.target.addressid.value);
       voterdata.append("mobile", event.target.mobilenoid.value);
       const response = await axios.post(
-        "http://localhost:3009/addvoter",
+        `${process.env.REACT_APP_API_URL}/addvoter`,
         voterdata
       );
       alert(response.data.message);

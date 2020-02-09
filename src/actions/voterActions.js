@@ -12,13 +12,16 @@ export function fetchVoters(filters) {
   return async function(dispatch) {
     try {
       debugger;
-      const response = await axios.post("http://localhost:3009/getfilteredvoter",filters);
-      response.data.map((data)=>{
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/getfilteredvoter`,
+        filters
+      );
+      response.data.map(data => {
         var base64Flag = `data:${data.photo.contentType};base64,`;
         var imageStr = arrayBufferToBase64(data.photo.data.data);
         data.photo = base64Flag + imageStr;
-        return data
-      })
+        return data;
+      });
       dispatch({
         type: FETCH_VOTER,
         payload: response.data
