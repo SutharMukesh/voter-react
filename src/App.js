@@ -3,16 +3,11 @@ import Register from "./components/register";
 import SearchVoter from "./components/readvoter";
 import { Provider } from "react-redux";
 import store from "./store";
-import {
-  NavLink,
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { NavLink, HashRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
       <Provider store={store}>
         <nav className="container nav mt-5 nav-tabs justify-content-center">
           <NavLink
