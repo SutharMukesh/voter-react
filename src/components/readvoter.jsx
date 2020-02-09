@@ -76,12 +76,25 @@ class SearchVoter extends Component {
                 />
               </div>
               <div className="form-group mt-2 row">
-                <button className="btn w-100 btn-secondary">Search</button>
+                <button className="btn w-100 btn-primary">
+                  {this.props.loading ? (
+                    <React.Fragment>
+                      <span
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      <span>   loading..</span>
+                    </React.Fragment>
+                  ) : (
+                    "Search"
+                  )}
+                </button>
               </div>
             </form>
           </div>
         </div>
-        {this.props.voters.length > 0 ? (
+        {(this.props.voters.length > 0) & !this.props.loading ? (
           this.props.voters.map(voter => (
             <div className="card shadow-sm mt-2 d-flex flex-row">
               <img
@@ -123,6 +136,7 @@ SearchVoter.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  voters: state.voterreducer.voters
+  voters: state.voterreducer.voters,
+  loading: state.loadingreducer.loading
 });
 export default connect(mapStateToProps, { fetchVoters })(SearchVoter);

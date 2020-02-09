@@ -1,4 +1,4 @@
-import { FETCH_VOTER } from "./types";
+import { FETCH_VOTER, LOADING_STATE } from "./types";
 import axios from "axios";
 
 function arrayBufferToBase64(buffer) {
@@ -12,6 +12,10 @@ export function fetchVoters(filters) {
   return async function(dispatch) {
     try {
       debugger;
+      dispatch({
+        type: LOADING_STATE,
+        payload: true
+      });
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/getfilteredvoter`,
         filters
@@ -25,6 +29,10 @@ export function fetchVoters(filters) {
       dispatch({
         type: FETCH_VOTER,
         payload: response.data
+      });
+      dispatch({
+        type: LOADING_STATE,
+        payload: false
       });
       // alert(response);
     } catch (error) {
